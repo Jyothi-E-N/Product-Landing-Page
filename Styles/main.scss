@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css2?family=Paprika&family=Roboto+Condensed:wght@400;700&display=swap");
+
+$paprika: "Paprika", cursive;
+$roboto: "Roboto Condensed", sans-serif;
+
+$white: #ffffff;
+$black: #000000;
+$brown: #9b3232;
+$dark-brown: #702525;
+$very-dark-brown: #500500;
+$yellow: #eabf26;
+$background: #e9e4e4;
+$dark-gray: rgba(0, 0, 0, 0.71);
+
+@mixin dispflex($template: row) {
+    display: flex;
+    flex-direction: $template;
+}
+
+@mixin centerEle() {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin posAbs() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: $paprika;
+    font-size: 62.3%;
+
+    #main {
+        @include dispflex(column);
+        width: 100%;
+
+        #top-container {
+            @include dispflex(column);
+            @include centerEle();
+            width: 100%;
+            height: 0;
+            padding-top: 51%;
+            position: relative;
+
+            #header {
+                padding: 10px 3%;
+                @include posAbs();
+                width: 100%;
+                height: 80px;
+                @include dispflex();
+                justify-content: space-between;
+                align-items: center;
+
+                #header-img {
+                    height: 100%;
+                }
+
+                #nav-bar {
+                    z-index: 1;
+                    width: 70%;
+                    justify-content: space-between;
+                    @include dispflex();
+                    font-size: 30px;
+                    font-family: $roboto;
+                }
+            }
+
+            #middle-text {
+                @include dispflex();
+                @include centerEle();
+                @include posAbs();
+                top: -10%;
+
+                h1 {
+                    width: 35%;
+                    color: $white;
+                    font-family: $roboto;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                    letter-spacing: 0.02em;
+                    font-size: 40px;
+                    text-align: center;
+                    z-index: 1;
+                }
+            }
+
+            #form {
+                @include dispflex();
+                padding-top: 20%;
+                @include centerEle();
+                gap: 3%;
+                @include posAbs();
+
+                input {
+                    font-family: $roboto;
+                    height: 40px;
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 15px;
+                    letter-spacing: 0.02em;
+                    border: 0;
+                    font-weight: bold;
+                    outline: none;
+                    border-radius: 5px;
+                }
+
+                #email {
+                    width: 20%;
+                    color: $brown;
+                    background-color: #0000009d;
+                }
+
+                #email:focus {
+                    border: 2px solid $brown;
+                }
+
+                #email::placeholder {
+                    color: $brown;
+                }
+
+                #submit {
+                    background-color: $dark-brown;
+                    color: black;
+                    font-weight: normal;
+                    width: 10%;
+                    transition: all 0.5s ease;
+                    cursor: pointer;
+                }
+
+                #submit:hover {
+                    color: $brown;
+                    background-color: #0000009d;
+                }
+            }
+        }
+
+        #top-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../Images/backgroundImage.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            // opacity: 0.8;
+            background-color: rgba(0, 0, 0, 0.3);
+            background-blend-mode: multiply;
+            z-index: -1;
+        }
+
+        #top-container::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0;
+            bottom: 100px;
+            right: 0;
+            box-shadow: 0px 0 150px 120px rgba(0, 0, 0, 0.473);
+            z-index: 100;
+        }
+    }
+}
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    font-weight: normal;
+    position: relative;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: $brown;
+    border-radius: 100px;
+    bottom: -2px;
+    transform: scaleX(0);
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transition: transform 200ms ease-in-out 0.1s;
+}
+
+#features {
+    @include dispflex(column);
+    @include centerEle();
+    gap: 50px;
+    padding: 40px 0;
+    background-color: $background;
+
+    #feature-card {
+        @include dispflex();
+        width: 80%;
+        gap: 5%;
+
+        .feature {
+            width: 30%;
+            @include dispflex(column);
+            gap: 20px;
+            @include centerEle();
+
+            img {
+                width: 80px;
+            }
+
+            h5 {
+                color: $dark-brown;
+                font-family: $roboto;
+                font-size: 20px;
+                letter-spacing: 0.02em;
+                font-weight: normal;
+            }
+
+            p {
+                color: black;
+                width: 70%;
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.heading {
+    font-size: 20px;
+}
+
+.head1 {
+    color: $brown;
+}
+
+#how-its-made {
+    padding: 50px 0;
+    @include dispflex(column);
+    @include centerEle();
+    gap: 60px;
+    background-color: $background;
+}
+
+#vedio {
+    height: 600px;
+    width: 70%;
+    // padding: 5% 20%;
+    background-color: $very-dark-brown;
+}
+
+.head3 {
+    color: green;
+}
+
+#order {
+    @extend #how-its-made;
+
+    #menu {
+        @include dispflex();
+        @include centerEle();
+        width: 90%;
+        gap: 3%;
+
+        .menu-cards {
+            border-radius: 5px;
+            @include dispflex(column);
+            @include centerEle();
+            box-shadow: 0.5px 0px 20px 10px rgba(0, 0, 0, 0.25);
+
+            img {
+                width: 100%;
+                border-radius: 5px 5px 0px 0px;
+            }
+
+            .pricing {
+                background-color: $very-dark-brown;
+                border-radius: 0 0 5px 5px;
+                width: 100%;
+                gap: 10px;
+                @include dispflex(column);
+                @include centerEle();
+                padding: 40px 0px;
+
+                h5 {
+                    text-align: center;
+                    font-size: 20px;
+                    color: white;
+                    font-weight: 400;
+                }
+                p {
+                    color: $yellow;
+                    font-size: 24px;
+                }
+
+                .button {
+                    padding: 3%;
+                    width: 80%;
+                    height: 50px;
+                    background-color: $yellow;
+                    border: none;
+                    outline: none;
+                    color: $very-dark-brown;
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin-top: 20px;
+                    transition: all 0.5s ease;
+                    cursor: pointer;
+                }
+
+                .button:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+.head4 {
+    color: $yellow;
+}
+
+#reviews {
+    @extend #how-its-made;
+
+    #review-cards {
+        width: 80%;
+        @include dispflex();
+        gap: 5%;
+
+        .review-card {
+            padding: 2%;
+            width: 100%;
+            @include dispflex(column);
+            @include centerEle();
+            gap: 20px;
+            background-color: $very-dark-brown;
+            border-radius: 5px;
+            box-shadow: 0.5px 0px 20px 10px rgba(0, 0, 0, 0.25);
+
+            p {
+                color: white;
+                width: 90%;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0.02em;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            .profile {
+                width: 80%;
+                @include dispflex();
+                @include centerEle();
+                justify-content: space-between;
+
+                img {
+                    border-radius: 50%;
+                    border: 3px solid black;
+                }
+
+                h5 {
+                    color: $yellow;
+                    font-size: 20px;
+                    font-family: $roboto;
+                    font-weight: normal;
+                    letter-spacing: 0.02em;
+                }
+            }
+        }
+    }
+}
+
+#contact-us {
+    @include dispflex(column);
+    gap: 30px;
+    background-color: $dark-gray;
+    padding: 5%;
+    #contact-info {
+        @include dispflex();
+        @include centerEle();
+        justify-content: space-around;
+
+        .info {
+            @include dispflex(column);
+            @include centerEle();
+            gap: 10px;
+            font-size: 17px;
+            letter-spacing: 0.02em;
+
+            h5 {
+                padding-bottom: 10px;
+            }
+
+            p {
+                color: $very-dark-brown;
+                letter-spacing: 0px;
+                font-weight: bold;
+            }
+        }
+    }
+    #share {
+        display: flex;
+        gap: 20px;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-top: 30px;
+
+        a img {
+            width: 3vw;
+            filter: invert(79%) sepia(98%) saturate(1253%) hue-rotate(329deg)
+                brightness(92%) contrast(100%);
+            transition: all 0.5s ease;
+        }
+
+        a img:hover {
+            filter: invert(20%) sepia(38%) saturate(2308%) hue-rotate(328deg)
+                brightness(107%) contrast(91%);
+            transform: scale(1.2);
+        }
+    }
+
+    #copy-right {
+        text-align: center;
+        color: white;
+        letter-spacing: 0.02em;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        min-width: 100%;
+        #main {
+            #top-container {
+                #header {
+                    #nav-bar {
+                        .nav-link {
+                            font-size: 15px;
+                        }
+                    }
+                }
+                #middle-text h1 {
+                    font-size: 20px;
+                }
+
+                #form {
+                    min-width: 70%;
+                    #email {
+                        min-width: 200px;
+                    }
+                    #submit {
+                        min-width: 100px;
+                    }
+                }
+            }
+
+            .heading h2 {
+                font-size: 20px;
+            }
+
+            #feature-card {
+                width: 100%;
+                gap: 0;
+
+                .feature {
+                    width: 100%;
+                }
+
+                .feature p {
+                    font-size: 15px;
+                }
+            }
+
+            #order {
+                #menu {
+                    @include dispflex(column);
+                    gap: 50px;
+                    width: 90%;
+
+                    .menu-cards {
+                        @include dispflex();
+                        width: 100%;
+
+                        .pricing {
+                            justify-content: space-around;
+                            width: 100%;
+                            min-height: 328px;
+                            border-radius: 0px 10px 10px 0px;
+
+                            h5,
+                            button {
+                                font-size: 15px;
+                            }
+
+                            p {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #reviews {
+                #review-cards {
+                    width: 90%;
+                    @include dispflex(column);
+                    gap: 50px;
+
+                    .review-card {
+                        width: 100%;
+                    }
+
+                    .profile {
+                        @include dispflex();
+                        justify-content: space-around;
+                    }
+
+                    .feedback {
+                        width: 80%;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            #contact-us{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    body{
+        min-width: 100vw;
+    }
+}

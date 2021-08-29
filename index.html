@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pizza Delivary</title>
+        <link rel="stylesheet" href="./Styles/main.css" />
+    </head>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <body>
+        <div id="main">
+            <div id="top-container">
+                <header id="header">
+                    <img
+                        src="./Images/Pizza_logo.png"
+                        alt="pizza-logo"
+                        id="header-img"
+                    />
+                    <nav id="nav-bar">
+                        <a href="#features" class="nav-link">features</a>
+                        <a href="#how-its-made" class="nav-link"
+                            >how its made</a
+                        >
+                        <a href="#order" class="nav-link">order</a>
+                        <a href="#reviews" class="nav-link">reviews</a>
+                        <a href="#contact-us" class="nav-link">contact us</a>
+                    </nav>
+                </header>
+                <div id="middle-text">
+                    <h1>fresh, delicious pizza delivered to your door steps</h1>
+                </div>
+                <form
+                    action="https://www.freecodecamp.com/email-submit"
+                    id="form"
+                >
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="Enter Your Email Address"
+                        name="email"
+                        required
+                    />
+                    <input type="submit" id="submit" value="Get Started" />
+                </form>
+            </div>
+            <div id="features">
+                <div class="heading head1">
+                    <h2>Features</h2>
+                </div>
+                <div id="feature-card">
+                    <div class="fast feature">
+                        <img
+                            src="./Images/features-icons/Mask Group.png"
+                            alt=""
+                        />
+                        <h5>Fast Delivery</h5>  
+                        <p>
+                            food is delivered to your address within an hour of
+                            placing order
+                        </p>
+                    </div>
+                    <div class="offer feature">
+                        <img
+                            src="./Images/features-icons/addOffers.png"
+                            alt=""
+                        />
+                        <h5>Add Offers</h5>
+                        <p>
+                            add offers to the orders and get the food at lower
+                            price
+                        </p>
+                    </div>
+                    <div class="cart feature">
+                        <img
+                            src="./Images/features-icons/foodCart.png"
+                            alt=""
+                        />
+                        <h5>Food Cart</h5>
+                        <p>
+                            add foods to the food cart and order all of them at
+                            a time
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="how-its-made">
+                <div class="heading head2">
+                    <h2>How It's Made</h2>
+                </div>
+                <iframe
+                    id="vedio"
+                    src="./Images/video.mp4"
+                    frameborder="0"
+                    webkitallowfullscreen
+                    mozallowfullscreen
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div id="order">
+                <div class="heading head3">
+                    <h2>Order Now</h2>
+                </div>
+                <div id="menu">
+                    <div class="menu-cards">
+                        <img src="./Images/Order-images/Pepperoni_pizza 1.png" alt="Pepperoni Pizza">
+                        <div class="pricing">
+                            <h5>Pepperoni Pizza</h5>
+                            <p>$5 - $15</p>
+                            <button class="button">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-cards">
+                        <img src="./Images/Order-images/Vegetarian_pizza 1.png" alt="Vegetarian Pizza">
+                        <div class="pricing">
+                            <h5>Vegetarian Pizza</h5>
+                            <p>$3 - $5</p>
+                            <button class="button">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-cards">
+                        <img src="./Images/Order-images/Margherita_pizza 1.png" alt="Margherita Pizza">
+                        <div class="pricing">
+                            <h5>Margherita Pizza</h5>
+                            <p>$6 - $10</p>
+                            <button class="button">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-cards">
+                        <img src="./Images/Order-images/ChickenSupreme_pizza 1.png" alt="Chicken Pizza">
+                        <div class="pricing">
+                            <h5>Chicken Pizza</h5>
+                            <p>$8 - $20</p>
+                            <button class="button">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="reviews">
+                <div class="heading head4">
+                    <h2>Reviews</h2>
+                </div>
+                <div id="review-cards">
+                    <div class="review-card">
+                        <div class="profile">
+                            <img src="./Images/review-profiles/image-irene.jpg" alt="">
+                            <h5>Irene Roberts</h5>
+                        </div>
+                        <p class="feedback">
+                            “ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor cididunt ut labore et ”
+                        </p>
+                    </div>
+                    <div class="review-card">
+                        <div class="profile">
+                            <img src="./Images/review-profiles/image-colton.jpg" alt="">
+                            <h5>Colton Smith</h5>
+                        </div>
+                        <p class="feedback">
+                            “ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co “
+                        </p>
+                    </div>
+                    <div class="review-card">
+                        <div class="profile">
+                            <img src="./Images/review-profiles/image-anne.jpg" alt="">
+                            <h5>Anne Wallace</h5>
+                        </div>
+                        <p class="feedback">
+                            “ Duis aute irure dolor in reprehenderit in voluptate velit esse cillumfugiat nulla ”
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="contact-us">
+                <div id="contact-info">
+                    <div class="info">
+                        <h5>Our Location</h5>
+                        <p>xyz street, sector - 17</p>
+                        <p>Banglore - 000***</p>
+                    </div>
+                    <div class="info">
+                        <h5>Opening Hours</h5>
+                        <p>Monday To Sunday</p>
+                        <p>9:00 AM - 10:00 PM</p>
+                    </div>
+                    <div class="info">
+                        <h5>Contact Us</h5>
+                        <p>91 94445 ****</p>
+                        <p>info@gmail.com</p>
+                    </div>
+                </div>
+                <div id="share">
+                    <a href="#">
+                        <img class="icon" src="./Images/sharing-icons/facebook (1).png" alt="facebook icon">
+                    </a>
+                    <a href="#">
+                        <img class="icon" src="./Images/sharing-icons/instagram.png" alt="instagram icon">
+                    </a>
+                    <a href="#">
+                        <img src="./Images/sharing-icons/twitter.png" alt="twitter icon" class="icon">
+                    </a>
+                    <a href="#">
+                        <img src="./Images/sharing-icons/youtube.png" alt="youtube icon"
+                        class="icon">
+                    </a>
+                </div>
+                <hr>
+                <div id="copy-right">
+                    <p>&copy; 2021 Copyright By Jyothi-E-N</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
